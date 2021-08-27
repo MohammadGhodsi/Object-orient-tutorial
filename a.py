@@ -28,11 +28,15 @@ class Deck(object):
            c.show()   
 
    def shuffle(self):
-       for i in range(len(self.cards)-1,0,-1) 
-      rand = random.randint(0,1)          
+       for i in range(len(self.cards)-1,0,-1) :
+          r = random.randint(0,1)  
+          self.cards[i] , self.cards[r] = self.cards[r] , self.cards[i]
 
-# class player(object):
-#     def __init__(self):
+   def draw(elf):
+       return self.cards.pop()               
+
+class player(object):
+     def __init__(self):
        
 
 
