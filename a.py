@@ -1,3 +1,7 @@
+from math import radians
+import random
+
+
 class Card(object):
     def __init__(self,suit,val):
         self.suit = suit
@@ -24,7 +28,8 @@ class Deck(object):
            c.show()   
 
    def shuffle(self):
-       for i in range(len(self.cards)-1,0,-1)                  
+       for i in range(len(self.cards)-1,0,-1) 
+      rand = random.randint(0,1)          
 
 # class player(object):
 #     def __init__(self):
