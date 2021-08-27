@@ -32,12 +32,20 @@ class Deck(object):
           r = random.randint(0,1)  
           self.cards[i] , self.cards[r] = self.cards[r] , self.cards[i]
 
-   def draw(elf):
+   def drawCard(elf):
        return self.cards.pop()               
 
 class player(object):
-     def __init__(self):
-       
+     def __init__(self , name):
+         self.name = name
+         self.hand = []
+
+     def draw(self,deck):
+         self.hand.append(Deck.drawCard())  
+
+     def showHand(self):
+         for card in self.hand:
+             card.show()    
 
 
 # card = Card("Club" , 6)
@@ -46,3 +54,12 @@ class player(object):
 deck = Deck()
 print(deck)
 deck.show()
+
+# player starts to play as bob!
+
+bob = player("Bob")
+bob.draw(deck)
+bob.showHand()
+
+card = deck.draw()
+card.show()
