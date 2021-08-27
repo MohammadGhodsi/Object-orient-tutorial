@@ -41,12 +41,13 @@ class player(object):
          self.hand = []
 
      def draw(self,deck):
-         self.hand.append(Deck.drawCard())  
+         self.hand.append(Deck.drawCard()) 
+         return self 
 
      def showHand(self):
          for card in self.hand:
              card.show()    
-
+             
 
 # card = Card("Club" , 6)
 # card.show()
@@ -58,7 +59,7 @@ deck.show()
 # player starts to play as bob!
 
 bob = player("Bob")
-bob.draw(deck)
+bob.draw(deck).draw(deck)
 bob.showHand()
 
 card = deck.draw()
